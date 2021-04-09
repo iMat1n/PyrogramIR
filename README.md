@@ -13,7 +13,7 @@
 ## 🔄 اجرا کردن ربات
 
 1. `git clone https://github.com/iMat1n/PyrogramIR.git`
-2. `cd assistant`
+2. `cd PyrogramIR`
 3. `pip install -U -r requirements.txt`
 4. Edit `config.ini.sample` file name to `config.ini` and edit the values.
 5. Run : `python -m assistant`.
