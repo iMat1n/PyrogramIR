@@ -236,12 +236,6 @@ async def fmt(_, message: Message):
 
 ################################
 
-EVIL = (
-    "Pyrogram is free, open-source and community driven software; "
-    "this means you are completely free to use it for any purpose whatsoever. "
-    "However, help and support is a privilege and nobody is obligated to assist you, "
-    "especially if you want to misbehave or harm Telegram with evil actions."
-)
 EVIL = '''
 ✨ پایروگرام ابزاری متن باز - رایگان و تحت نظر انجمن است.
 این به این معناست که شما میتوانید هرگونه استفاده ای از این ابزار را داشته باشید.
@@ -318,8 +312,7 @@ up
 ```
 """
 
-@Assistant.on_message(command("help"))
-@admins_only
+@Assistant.on_message(command("help") & filters.private)
 async def help(bot: Assistant, message: Message):
     """Show this message"""
     await asyncio.gather(
